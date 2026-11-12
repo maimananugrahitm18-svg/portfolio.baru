@@ -1,0 +1,1610 @@
+<!DOCTYPE html>
+<html lang="id" data-theme="dark">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Maiman Anugrah | Laravel Backend & Fullstack Web Developer Portfolio</title>
+  <meta name="description" content="Portofolio Web Developer spesialis Laravel Framework, RESTful API, Database Optimization, dan Solusi Fullstack Web Modern oleh Maiman Anugrah.">
+  <meta name="keywords" content="Laravel, Web Developer, Backend Developer, PHP, MySQL, REST API, Fullstack, Portofolio Laravel, Maiman Anugrah">
+  <meta name="author" content="Maiman Anugrah">
+
+  <!-- Open Graph Meta Tags -->
+  <meta property="og:title" content="Maiman Anugrah | Laravel & Fullstack Web Developer">
+  <meta property="og:description" content="Portofolio profesional pengembangan web berbasis Laravel, arsitektur RESTful API, dan optimasi database.">
+  <meta property="og:type" content="website">
+
+  <!-- Google Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;500;600&family=Outfit:wght@500;600;700;800&family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+  <!-- Custom Stylesheet -->
+  <link rel="stylesheet" href="css/style.css">
+  <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='%23FF2D20'%3E%3Cpath d='M12 2L2 7l10 5 10-5-10-5zM2 17l10 5 10-5M2 12l10 5 10-5'/%3E%3C/svg%3E">
+
+  <!-- Theme Color Meta -->
+  <meta name="theme-color" content="#0a0d14">
+
+  <!-- Anti-flash inline theme loader -->
+  <script>
+    (function() {
+      try {
+        var saved = localStorage.getItem('site_theme');
+        if (saved === 'light' || saved === 'dark') {
+          document.documentElement.setAttribute('data-theme', saved);
+        } else {
+          document.documentElement.setAttribute('data-theme', 'dark');
+        }
+      } catch (e) {
+        document.documentElement.setAttribute('data-theme', 'dark');
+      }
+    })();
+  </script>
+</head>
+<body>
+  <!-- Ambient background glow elements -->
+  <div class="ambient-glow glow-1" aria-hidden="true"></div>
+  <div class="ambient-glow glow-2" aria-hidden="true"></div>
+  <div class="ambient-glow glow-3" aria-hidden="true"></div>
+
+  <!-- Header / Navigation -->
+  <header class="site-header" id="navbar">
+    <div class="container nav-container">
+      <a href="#home" class="brand-logo" aria-label="Beranda Maiman Anugrah">
+        <span class="logo-symbol">
+          <svg viewBox="0 0 24 24" width="22" height="22" fill="currentColor">
+            <path d="M12 2L2 7l10 5 10-5-10-5zM2 17l10 5 10-5M2 12l10 5 10-5"/>
+          </svg>
+        </span>
+        <span class="logo-text">Maiman<span class="highlight">.dev</span></span>
+      </a>
+
+      <!-- Desktop Nav -->
+      <nav class="nav-menu" id="navMenu">
+        <ul class="nav-list">
+          <li><a href="#home" class="nav-link active">Home</a></li>
+          <li><a href="#about" class="nav-link">Tentang Saya</a></li>
+          <li><a href="#architecture" class="nav-link">Arsitektur</a></li>
+          <li><a href="#skills" class="nav-link">Skills</a></li>
+          <li><a href="#api-playground" class="nav-link">API Console</a></li>
+          <li><a href="#projects" class="nav-link">Projects</a></li>
+          <li><a href="#certificates" class="nav-link">Sertifikat</a></li>
+          <li><a href="#kontak" class="nav-link">Kontak</a></li>
+          <li class="mobile-nav-theme-item">
+            <button id="mobileThemeToggle" class="mobile-theme-btn" type="button" aria-label="Ganti Tema Tampilan">
+              <span class="mobile-theme-icon-wrap">
+                <svg class="sun-icon" viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="2">
+                  <circle cx="12" cy="12" r="5"></circle>
+                  <line x1="12" y1="1" x2="12" y2="3"></line>
+                  <line x1="12" y1="21" x2="12" y2="23"></line>
+                  <line x1="4.22" y1="4.22" x2="5.64" y2="5.64"></line>
+                  <line x1="18.36" y1="18.36" x2="19.78" y2="19.78"></line>
+                  <line x1="1" y1="12" x2="3" y2="12"></line>
+                  <line x1="21" y1="12" x2="23" y2="12"></line>
+                  <line x1="4.22" y1="19.78" x2="5.64" y2="18.36"></line>
+                  <line x1="18.36" y1="5.64" x2="19.78" y2="4.22"></line>
+                </svg>
+                <svg class="moon-icon" viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="2">
+                  <path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"></path>
+                </svg>
+              </span>
+              <span class="mobile-theme-text-status">Tema: <strong>Mode Gelap</strong></span>
+            </button>
+          </li>
+        </ul>
+      </nav>
+
+      <div class="nav-actions">
+        <!-- Command Palette Trigger -->
+        <button id="cmdPaletteBtn" class="btn-cmd-palette" title="Buka Command Palette (Ctrl+K)" aria-label="Command Palette">
+          <svg viewBox="0 0 24 24" width="14" height="14" fill="none" stroke="currentColor" stroke-width="2">
+            <circle cx="11" cy="11" r="8"></circle>
+            <line x1="21" y1="21" x2="16.65" y2="16.65"></line>
+          </svg>
+          <span class="cmd-text">Menu</span>
+          <kbd class="cmd-kbd">⌘K</kbd>
+        </button>
+
+        <!-- Theme Toggle -->
+        <button id="themeToggle" class="btn-icon theme-toggle" title="Ganti Mode Tampilan" aria-label="Toggle Theme">
+          <svg class="sun-icon" viewBox="0 0 24 24" width="20" height="20" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+            <circle cx="12" cy="12" r="5"></circle>
+            <line x1="12" y1="1" x2="12" y2="3"></line>
+            <line x1="12" y1="21" x2="12" y2="23"></line>
+            <line x1="4.22" y1="4.22" x2="5.64" y2="5.64"></line>
+            <line x1="18.36" y1="18.36" x2="19.78" y2="19.78"></line>
+            <line x1="1" y1="12" x2="3" y2="12"></line>
+            <line x1="21" y1="12" x2="23" y2="12"></line>
+            <line x1="4.22" y1="19.78" x2="5.64" y2="18.36"></line>
+            <line x1="18.36" y1="5.64" x2="19.78" y2="4.22"></line>
+          </svg>
+          <svg class="moon-icon" viewBox="0 0 24 24" width="20" height="20" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+            <path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"></path>
+          </svg>
+        </button>
+
+        <!-- CTA Resume -->
+        <a href="#kontak" class="btn btn-outline btn-sm cta-header">Hire Me</a>
+
+        <!-- Mobile Toggle Button -->
+        <button id="mobileMenuBtn" class="mobile-toggle" aria-label="Toggle Menu" aria-expanded="false">
+          <span class="bar"></span>
+          <span class="bar"></span>
+          <span class="bar"></span>
+        </button>
+      </div>
+    </div>
+  </header>
+
+  <main>
+    <!-- 1. HOME / HERO SECTION -->
+    <section id="home" class="hero-section">
+      <div class="container hero-grid">
+        <div class="hero-content">
+          <div class="system-status-strip">
+            <span class="pulse-dot-green"></span>
+            <span>Production Ready • 99.9% Uptime • Asia/Jakarta (UTC+7)</span>
+          </div>
+
+          <div class="badge-status">
+            <img src="assets/images/profile.jpg" alt="Maiman Anugrah" class="badge-avatar">
+            <span class="pulse-dot"></span>
+            <span>Tersedia untuk Freelance & Full-time Backend / Fullstack</span>
+          </div>
+
+          <h1 class="hero-title">
+            Membangun Arsitektur Web Tangguh, Skalabel & Cepat dengan <span class="gradient-text">Laravel & Modern Stack</span>
+          </h1>
+
+          <p class="hero-description">
+            Halo! Saya <strong>Maiman Anugrah</strong>, seorang Backend & Fullstack Web Engineer yang mendedikasikan diri pada Clean Architecture (SOLID), arsitektur RESTful API berkeamanan tinggi, optimasi query database relasional, dan integrasi ekosistem web modern menggunakan <strong>PHP & Laravel</strong>.
+          </p>
+
+          <div class="hero-cta-group">
+            <a href="#projects" class="btn btn-primary">
+              <span>🚀 Lihat Karya & Demo</span>
+              <svg viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                <line x1="5" y1="12" x2="19" y2="12"></line>
+                <polyline points="12 5 19 12 12 19"></polyline>
+              </svg>
+            </a>
+            <a href="https://wa.me/6282289152653?text=Halo%20Maiman%2C%20saya%20tertarik%20berdiskusi%20tentang%20proyek%20pengembangan%20web%20Laravel." target="_blank" rel="noopener noreferrer" class="btn btn-secondary">
+              <svg viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                <path d="M21 11.5a8.38 8.38 0 0 1-.9 3.8 8.5 8.5 0 0 1-7.6 4.7 8.38 8.38 0 0 1-3.8-.9L3 21l1.9-5.7a8.38 8.38 0 0 1-.9-3.8 8.5 8.5 0 0 1 4.7-7.6 8.38 8.38 0 0 1 3.8-.9h.5a8.48 8.48 0 0 1 8 8v.5z"></path>
+              </svg>
+              <span>Konsultasi WhatsApp</span>
+            </a>
+            <button id="copyEmailHeroBtn" class="hero-copy-pill" type="button" title="Klik untuk Salin Email">
+              <svg viewBox="0 0 24 24" width="14" height="14" fill="none" stroke="currentColor" stroke-width="2">
+                <rect x="9" y="9" width="13" height="13" rx="2" ry="2"></rect>
+                <path d="M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v1"></path>
+              </svg>
+              <span id="heroCopyEmailText">maimananugrahitm18@gmail.com</span>
+            </button>
+          </div>
+
+          <!-- Hero Tech Stack Mini Pills -->
+          <div class="hero-tech-stack">
+            <span class="tech-stack-label">Fokus Teknologi:</span>
+            <div class="tech-pills">
+              <span class="tech-badge"><i class="badge-dot laravel"></i> Laravel 11/12</span>
+              <span class="tech-badge"><i class="badge-dot php"></i> PHP 8.3</span>
+              <span class="tech-badge"><i class="badge-dot mysql"></i> MySQL / Postgre</span>
+              <span class="tech-badge"><i class="badge-dot redis"></i> Redis Caching</span>
+              <span class="tech-badge"><i class="badge-dot api"></i> RESTful API</span>
+              <span class="tech-badge"><i class="badge-dot livewire"></i> Filament & Livewire</span>
+            </div>
+          </div>
+
+          <!-- Quick Stats -->
+          <div class="hero-stats">
+            <div class="stat-item">
+              <span class="stat-number" data-target="3">0</span><span class="stat-plus">+</span>
+              <span class="stat-label">Tahun Pengalaman</span>
+            </div>
+            <div class="stat-divider"></div>
+            <div class="stat-item">
+              <span class="stat-number" data-target="24">0</span><span class="stat-plus">+</span>
+              <span class="stat-label">Proyek Selesai</span>
+            </div>
+            <div class="stat-divider"></div>
+            <div class="stat-item">
+              <span class="stat-number" data-target="99">0</span><span class="stat-plus">%</span>
+              <span class="stat-label">Clean Code & Uptime</span>
+            </div>
+            <div class="stat-divider"></div>
+            <div class="stat-item">
+              <span class="stat-number" data-target="45">0</span><span class="stat-plus">ms</span>
+              <span class="stat-label">Avg Query Latency</span>
+            </div>
+          </div>
+        </div>
+
+        <!-- Hero Interactive Code / Terminal Visual -->
+        <div class="hero-visual">
+          <div class="terminal-card">
+            <div class="terminal-header">
+              <div class="terminal-dots">
+                <span class="dot red"></span>
+                <span class="dot yellow"></span>
+                <span class="dot green"></span>
+              </div>
+              <div class="terminal-tabs">
+                <button class="terminal-tab active" data-code="controller">OrderController.php</button>
+                <button class="terminal-tab" data-code="service">OrderService.php</button>
+                <button class="terminal-tab" data-code="migration">migration.php</button>
+                <button class="terminal-tab" data-code="cli" style="color: #79c0ff; font-weight: 700;">&gt;_ artisan CLI</button>
+              </div>
+              <button class="terminal-copy" id="copyCodeBtn" title="Salin Kode">
+                <svg viewBox="0 0 24 24" width="16" height="16" fill="none" stroke="currentColor" stroke-width="2">
+                  <rect x="9" y="9" width="13" height="13" rx="2" ry="2"></rect>
+                  <path d="M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v1"></path>
+                </svg>
+                <span class="copy-text">Copy</span>
+              </button>
+            </div>
+            <div class="terminal-body" id="terminalCodeView">
+              <pre><code id="terminalCodeContent" class="language-php"><span class="c-comment">// App\Http\Controllers\Api\OrderController</span>
+<span class="c-keyword">namespace</span> App\Http\Controllers\Api;
+
+<span class="c-keyword">use</span> App\Services\OrderService;
+<span class="c-keyword">use</span> App\Http\Requests\StoreOrderRequest;
+<span class="c-keyword">use</span> App\Http\Resources\OrderResource;
+
+<span class="c-keyword">class</span> <span class="c-class">OrderController</span> <span class="c-keyword">extends</span> BaseApiController
+{
+    <span class="c-keyword">public function</span> <span class="c-function">__construct</span>(
+        <span class="c-keyword">protected</span> OrderService <span class="c-var">$orderService</span>
+    ) {}
+
+    <span class="c-keyword">public function</span> <span class="c-function">checkout</span>(StoreOrderRequest <span class="c-var">$request</span>)
+    {
+        <span class="c-var">$order</span> = <span class="c-var">$this</span>->orderService->processCheckout(
+            userId: auth()->id(),
+            items: <span class="c-var">$request</span>->validated(<span class="c-string">'items'</span>),
+            paymentMethod: <span class="c-var">$request</span>->payment_method
+        );
+
+        <span class="c-keyword">return</span> <span class="c-keyword">new</span> OrderResource(<span class="c-var">$order</span>);
+    }
+}</code></pre>
+            </div>
+
+            <!-- Interactive Terminal CLI (Activated when cli tab clicked) -->
+            <div class="terminal-cli-wrap" id="terminalCliView" style="display: none;">
+              <div class="cli-quick-commands">
+                <span class="cli-quick-label">⚡ Perintah Cepat:</span>
+                <button type="button" class="cli-quick-btn" data-cmd="artisan test">php artisan test</button>
+                <button type="button" class="cli-quick-btn" data-cmd="artisan inspire">php artisan inspire</button>
+                <button type="button" class="cli-quick-btn" data-cmd="artisan list">php artisan list</button>
+                <button type="button" class="cli-quick-btn" data-cmd="skills">skills</button>
+                <button type="button" class="cli-quick-btn" data-cmd="whoami">whoami</button>
+                <button type="button" class="cli-quick-btn" data-cmd="clear" style="color: #ff7b72;">clear</button>
+              </div>
+              <div class="cli-logs" id="cliLogs">
+                <div class="cli-log-line cli-log-accent">Laravel Artisan Interactive CLI v11.33.0 (PHP v8.3.4)</div>
+                <div class="cli-log-line">Ketik perintah atau klik tombol cepat di atas untuk mencoba. Coba: <code style="color:#79c0ff;">artisan test</code></div>
+              </div>
+              <div class="cli-input-line">
+                <span class="cli-prompt">developer@maiman:~$</span>
+                <input type="text" id="cliInput" class="cli-input" placeholder="Ketik perintah (contoh: test, inspire, skills, help)..." autocomplete="off" spellcheck="false">
+              </div>
+            </div>
+
+            <div class="terminal-footer">
+              <span class="status-indicator"></span>
+              <span class="terminal-status" id="terminalStatusText">Laravel v11.x • PHP 8.3 • Tests Passing (100%)</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- 2. TENTANG SAYA SECTION -->
+    <section id="about" class="section about-section">
+      <div class="container">
+        <div class="section-header">
+          <span class="section-tag">Profil Profesional</span>
+          <h2 class="section-title">Tentang <span class="gradient-text">Saya</span></h2>
+          <p class="section-subtitle">
+            Membangun fondasi digital yang kuat melalui kode terstruktur, performa optimal, dan arsitektur yang siap bertumbuh.
+          </p>
+        </div>
+
+        <div class="about-grid">
+          <div class="about-card-main">
+            <div class="avatar-wrapper">
+              <div class="avatar-backdrop"></div>
+              <div class="avatar-box">
+                <div class="avatar-inner">
+                  <img src="assets/images/profile.jpg" alt="Foto Profil Maiman Anugrah" class="avatar-photo">
+                  <div class="avatar-badge" title="Laravel Developer">
+                    <svg viewBox="0 0 24 24" width="20" height="20" fill="currentColor">
+                      <path d="M12 2L2 7l10 5 10-5-10-5zM2 17l10 5 10-5M2 12l10 5 10-5"/>
+                    </svg>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <div class="about-bio">
+              <h3>Maiman Anugrah</h3>
+              <p class="about-role">Laravel Specialist & Backend Web Engineer</p>
+              <p class="about-desc">
+                Saya adalah pengembang web dengan spesialisasi mendalam di ekosistem <strong>Laravel</strong>. Berpengalaman dalam merancang arsitektur aplikasi dari tahap perancangan skema database relasional (MySQL / PostgreSQL), optimasi query yang kompleks, pembuatan RESTful API berkeamanan tinggi, hingga integrasi background jobs menggunakan Redis.
+              </p>
+              <p class="about-desc">
+                Saya percaya bahwa kode yang hebat bukan hanya yang "berjalan", melainkan kode yang bersih, mudah dirawat (<em>maintainable</em>), memiliki test coverage yang baik, serta dapat diandalkan saat traffic sistem melonjak tinggi.
+              </p>
+
+              <div class="about-highlights">
+                <div class="highlight-item">
+                  <span class="highlight-icon">
+                    <svg viewBox="0 0 24 24" width="20" height="20" fill="none" stroke="currentColor" stroke-width="2">
+                      <polyline points="20 6 9 17 4 12"></polyline>
+                    </svg>
+                  </span>
+                  <span><strong>Clean Architecture:</strong> Service-Repository Pattern & SOLID Principles</span>
+                </div>
+                <div class="highlight-item">
+                  <span class="highlight-icon">
+                    <svg viewBox="0 0 24 24" width="20" height="20" fill="none" stroke="currentColor" stroke-width="2">
+                      <polyline points="20 6 9 17 4 12"></polyline>
+                    </svg>
+                  </span>
+                  <span><strong>Security Standards:</strong> Sanctum, JWT, CSRF/XSS Prevention, RBAC</span>
+                </div>
+                <div class="highlight-item">
+                  <span class="highlight-icon">
+                    <svg viewBox="0 0 24 24" width="20" height="20" fill="none" stroke="currentColor" stroke-width="2">
+                      <polyline points="20 6 9 17 4 12"></polyline>
+                    </svg>
+                  </span>
+                  <span><strong>Performance Tuning:</strong> Eager Loading, Redis Caching & Queue Worker</span>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- 2.5 ARSITEKTUR & LIFECYCLE SECTION -->
+    <section id="architecture" class="section architecture-section">
+      <div class="container">
+        <div class="section-header">
+          <span class="section-tag">Engineering Workflow</span>
+          <h2 class="section-title">Arsitektur Sistem & <span class="gradient-text">Request Lifecycle</span></h2>
+          <p class="section-subtitle">
+            Standar industri dalam merancang sistem web Laravel yang decoupled, aman, dan mudah di-scale saat beban trafik tinggi.
+          </p>
+        </div>
+
+        <!-- 5-Step Pipeline Buttons -->
+        <div class="arch-pipeline-nav" id="archPipelineNav">
+          <button type="button" class="pipeline-step-btn active" data-step="1">
+            <span class="step-num-pill">Layer 01</span>
+            <span class="step-btn-title">Gateway & Throttle</span>
+            <span class="step-btn-sub">Rate limit, SSL, CORS</span>
+          </button>
+          <button type="button" class="pipeline-step-btn" data-step="2">
+            <span class="step-num-pill">Layer 02</span>
+            <span class="step-btn-title">Form Request & DTO</span>
+            <span class="step-btn-sub">Strict validation & rules</span>
+          </button>
+          <button type="button" class="pipeline-step-btn" data-step="3">
+            <span class="step-num-pill">Layer 03</span>
+            <span class="step-btn-title">Service & Logic</span>
+            <span class="step-btn-sub">SOLID & transactions</span>
+          </button>
+          <button type="button" class="pipeline-step-btn" data-step="4">
+            <span class="step-num-pill">Layer 04</span>
+            <span class="step-btn-title">Eloquent & Query</span>
+            <span class="step-btn-sub">Eager load, no N+1</span>
+          </button>
+          <button type="button" class="pipeline-step-btn" data-step="5">
+            <span class="step-num-pill">Layer 05</span>
+            <span class="step-btn-title">Redis & Queues</span>
+            <span class="step-btn-sub">In-memory & async jobs</span>
+          </button>
+        </div>
+
+        <!-- Dynamic Display Card for selected step -->
+        <div class="arch-display-card" id="archDisplayCard">
+          <div class="arch-display-info" id="archDisplayInfo">
+            <span class="step-num-pill" id="archStepPill">Layer 01 • Client Gateway</span>
+            <h3 id="archStepTitle">Rate Limiting & Security Middleware</h3>
+            <p class="arch-display-desc" id="archStepDesc">
+              Setiap request masuk melalui Nginx reverse proxy dengan SSL/TLS termination, melewati filter throttling adaptif (ThrottleRequests) untuk mencegah serangan DDoS dan brute-force, serta verifikasi CSRF/Sanctum Bearer Token.
+            </p>
+            <div class="arch-feature-badges" id="archStepBadges">
+              <span class="arch-badge-item">🛡️ Throttle 60 req/min</span>
+              <span class="arch-badge-item">🔑 Laravel Sanctum Bearer</span>
+              <span class="arch-badge-item">🌐 CORS & Security Headers</span>
+            </div>
+          </div>
+          <div class="arch-code-box">
+            <div class="arch-code-header">
+              <span id="archCodeFileName">app/Http/Kernel.php</span>
+              <span>PHP 8.3</span>
+            </div>
+            <pre class="arch-code-content"><code id="archCodeSnippet"><span class="c-comment">// Rate Limiting & Sanctum Middleware</span>
+Route::<span class="c-function">middleware</span>([
+    <span class="c-string">'throttle:api'</span>,
+    <span class="c-string">'auth:sanctum'</span>,
+    EnsureEmailIsVerified::<span class="c-keyword">class</span>,
+])-><span class="c-function">group</span>(<span class="c-keyword">function</span> () {
+    Route::<span class="c-function">apiResource</span>(<span class="c-string">'orders'</span>, OrderController::<span class="c-keyword">class</span>);
+});</code></pre>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- 3. SKILLS SECTION -->
+    <section id="skills" class="section skills-section">
+      <div class="container">
+        <div class="section-header">
+          <span class="section-tag">Keahlian Teknis</span>
+          <h2 class="section-title">Keahlian & <span class="gradient-text">Tech Stack</span></h2>
+          <p class="section-subtitle">
+            Perangkat dan teknologi yang saya gunakan sehari-hari dalam membangun sistem web enterprise yang tangguh.
+          </p>
+        </div>
+
+        <!-- Skill Categories Grid -->
+        <div class="skills-categories-grid">
+          <!-- Category 1: Backend Core & Laravel -->
+          <div class="skill-category-card">
+            <div class="category-header">
+              <div class="category-icon-wrapper red">
+                <svg viewBox="0 0 24 24" width="22" height="22" fill="none" stroke="currentColor" stroke-width="2">
+                  <polygon points="12 2 2 7 12 12 22 7 12 2"></polygon>
+                  <polyline points="2 17 12 22 22 17"></polyline>
+                  <polyline points="2 12 12 17 22 12"></polyline>
+                </svg>
+              </div>
+              <div>
+                <h3>Backend & Framework</h3>
+                <span class="category-sub">Fondasi Inti Aplikasi</span>
+              </div>
+            </div>
+
+            <div class="skills-list">
+              <div class="skill-item">
+                <div class="skill-info">
+                  <span class="skill-name">Laravel (v8 - v11)</span>
+                  <span class="skill-pct">95%</span>
+                </div>
+                <div class="skill-bar-bg"><div class="skill-bar-fill" style="width: 95%;"></div></div>
+                <span class="skill-detail">Eloquent ORM, Service Layer, Middleware, Policies</span>
+              </div>
+
+              <div class="skill-item">
+                <div class="skill-info">
+                  <span class="skill-name">PHP (7.4, 8.x)</span>
+                  <span class="skill-pct">92%</span>
+                </div>
+                <div class="skill-bar-bg"><div class="skill-bar-fill" style="width: 92%;"></div></div>
+                <span class="skill-detail">OOP, Design Patterns, SOLID, Type Hinting, Attributes</span>
+              </div>
+
+              <div class="skill-item">
+                <div class="skill-info">
+                  <span class="skill-name">Filament Admin & Livewire</span>
+                  <span class="skill-pct">88%</span>
+                </div>
+                <div class="skill-bar-bg"><div class="skill-bar-fill" style="width: 88%;"></div></div>
+                <span class="skill-detail">Rapid admin panel, reactive UI, dynamic forms</span>
+              </div>
+
+              <div class="skill-item">
+                <div class="skill-info">
+                  <span class="skill-name">Authentication & Security</span>
+                  <span class="skill-pct">90%</span>
+                </div>
+                <div class="skill-bar-bg"><div class="skill-bar-fill" style="width: 90%;"></div></div>
+                <span class="skill-detail">Laravel Sanctum, Passport, Spatie Permission (RBAC)</span>
+              </div>
+            </div>
+          </div>
+
+          <!-- Category 2: Database & Caching -->
+          <div class="skill-category-card">
+            <div class="category-header">
+              <div class="category-icon-wrapper blue">
+                <svg viewBox="0 0 24 24" width="22" height="22" fill="none" stroke="currentColor" stroke-width="2">
+                  <ellipse cx="12" cy="5" rx="9" ry="3"></ellipse>
+                  <path d="M21 12c0 1.66-4 3-9 3s-9-1.34-9-3"></path>
+                  <path d="M3 5v14c0 1.66 4 3 9 3s9-1.34 9-3V5"></path>
+                </svg>
+              </div>
+              <div>
+                <h3>Database & Caching</h3>
+                <span class="category-sub">Struktur & Kecepatan Data</span>
+              </div>
+            </div>
+
+            <div class="skills-list">
+              <div class="skill-item">
+                <div class="skill-info">
+                  <span class="skill-name">MySQL / MariaDB</span>
+                  <span class="skill-pct">90%</span>
+                </div>
+                <div class="skill-bar-bg"><div class="skill-bar-fill" style="width: 90%;"></div></div>
+                <span class="skill-detail">Relational Schema, Indexing, Transactions, Foreign Keys</span>
+              </div>
+
+              <div class="skill-item">
+                <div class="skill-info">
+                  <span class="skill-name">PostgreSQL</span>
+                  <span class="skill-pct">85%</span>
+                </div>
+                <div class="skill-bar-bg"><div class="skill-bar-fill" style="width: 85%;"></div></div>
+                <span class="skill-detail">JSONB columns, complex aggregations, fulltext search</span>
+              </div>
+
+              <div class="skill-item">
+                <div class="skill-info">
+                  <span class="skill-name">Redis In-Memory</span>
+                  <span class="skill-pct">82%</span>
+                </div>
+                <div class="skill-bar-bg"><div class="skill-bar-fill" style="width: 82%;"></div></div>
+                <span class="skill-detail">Key-value caching, rate-limiting, session driver</span>
+              </div>
+
+              <div class="skill-item">
+                <div class="skill-info">
+                  <span class="skill-name">Queue Workers & Jobs</span>
+                  <span class="skill-pct">88%</span>
+                </div>
+                <div class="skill-bar-bg"><div class="skill-bar-fill" style="width: 88%;"></div></div>
+                <span class="skill-detail">Asynchronous tasks, email dispatching, background reports</span>
+              </div>
+            </div>
+          </div>
+
+          <!-- Category 3: API & Integrations -->
+          <div class="skill-category-card">
+            <div class="category-header">
+              <div class="category-icon-wrapper green">
+                <svg viewBox="0 0 24 24" width="22" height="22" fill="none" stroke="currentColor" stroke-width="2">
+                  <path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"></path>
+                  <path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"></path>
+                </svg>
+              </div>
+              <div>
+                <h3>API & Integrations</h3>
+                <span class="category-sub">Konektivitas & Eksternal</span>
+              </div>
+            </div>
+
+            <div class="skills-list">
+              <div class="skill-item">
+                <div class="skill-info">
+                  <span class="skill-name">RESTful API Design</span>
+                  <span class="skill-pct">94%</span>
+                </div>
+                <div class="skill-bar-bg"><div class="skill-bar-fill" style="width: 94%;"></div></div>
+                <span class="skill-detail">API Resources, Form Requests, Error Handling, Versioning</span>
+              </div>
+
+              <div class="skill-item">
+                <div class="skill-info">
+                  <span class="skill-name">Payment Gateway (Midtrans/Xendit)</span>
+                  <span class="skill-pct">87%</span>
+                </div>
+                <div class="skill-bar-bg"><div class="skill-bar-fill" style="width: 87%;"></div></div>
+                <span class="skill-detail">Snap token, Webhook verification, VA & QRIS settlement</span>
+              </div>
+
+              <div class="skill-item">
+                <div class="skill-info">
+                  <span class="skill-name">Swagger & Postman Documentation</span>
+                  <span class="skill-pct">90%</span>
+                </div>
+                <div class="skill-bar-bg"><div class="skill-bar-fill" style="width: 90%;"></div></div>
+                <span class="skill-detail">Interactive API specs, automated postman testing collection</span>
+              </div>
+
+              <div class="skill-item">
+                <div class="skill-info">
+                  <span class="skill-name">Third-Party Webhooks & WhatsApp</span>
+                  <span class="skill-pct">85%</span>
+                </div>
+                <div class="skill-bar-bg"><div class="skill-bar-fill" style="width: 85%;"></div></div>
+                <span class="skill-detail">Fonnte / Twilio notification, HMAC signature validation</span>
+              </div>
+            </div>
+          </div>
+
+          <!-- Category 4: DevOps, Frontend & Tools -->
+          <div class="skill-category-card">
+            <div class="category-header">
+              <div class="category-icon-wrapper purple">
+                <svg viewBox="0 0 24 24" width="22" height="22" fill="none" stroke="currentColor" stroke-width="2">
+                  <polyline points="16 18 22 12 16 6"></polyline>
+                  <polyline points="8 6 2 12 8 18"></polyline>
+                </svg>
+              </div>
+              <div>
+                <h3>Frontend & DevOps Tools</h3>
+                <span class="category-sub">Alur Kerja & Implementasi</span>
+              </div>
+            </div>
+
+            <div class="skills-list">
+              <div class="skill-item">
+                <div class="skill-info">
+                  <span class="skill-name">Blade & Modern Frontend (JS/CSS)</span>
+                  <span class="skill-pct">88%</span>
+                </div>
+                <div class="skill-bar-bg"><div class="skill-bar-fill" style="width: 88%;"></div></div>
+                <span class="skill-detail">Blade components, Alpine.js, Responsive CSS, Inertia.js</span>
+              </div>
+
+              <div class="skill-item">
+                <div class="skill-info">
+                  <span class="skill-name">Git & GitHub Workflow</span>
+                  <span class="skill-pct">92%</span>
+                </div>
+                <div class="skill-bar-bg"><div class="skill-bar-fill" style="width: 92%;"></div></div>
+                <span class="skill-detail">Branching strategy, PR review, GitHub Actions CI/CD</span>
+              </div>
+
+              <div class="skill-item">
+                <div class="skill-info">
+                  <span class="skill-name">Docker & Sail</span>
+                  <span class="skill-pct">80%</span>
+                </div>
+                <div class="skill-bar-bg"><div class="skill-bar-fill" style="width: 80%;"></div></div>
+                <span class="skill-detail">Containerized PHP, Nginx, MySQL, and Redis setups</span>
+              </div>
+
+              <div class="skill-item">
+                <div class="skill-info">
+                  <span class="skill-name">Linux VPS & Nginx Deploy</span>
+                  <span class="skill-pct">84%</span>
+                </div>
+                <div class="skill-bar-bg"><div class="skill-bar-fill" style="width: 84%;"></div></div>
+                <span class="skill-detail">Ubuntu Server, SSL Certbot, Supervisor Daemon, Cron Jobs</span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- 3.5 INTERACTIVE API PLAYGROUND -->
+    <section id="api-playground" class="section api-playground-section">
+      <div class="container">
+        <div class="section-header">
+          <span class="section-tag">Backend In Action</span>
+          <h2 class="section-title">Interactive <span class="gradient-text">API Console</span></h2>
+          <p class="section-subtitle">
+            Uji coba simulasi RESTful API endpoint saya secara langsung via browser dengan latensi realtime dan respon JSON terformat.
+          </p>
+        </div>
+
+        <div class="api-console-box">
+          <div class="api-toolbar">
+            <span class="api-method-badge" id="apiMethodBadge">GET</span>
+            <select id="apiEndpointSelect" class="api-endpoint-select" aria-label="Pilih REST API Endpoint">
+              <option value="profile">/api/v1/developer/profile</option>
+              <option value="tech-stack">/api/v1/tech-stack/matrix</option>
+              <option value="projects">/api/v1/projects/featured</option>
+              <option value="system-health">/api/v1/system/health</option>
+            </select>
+            <button type="button" id="apiSendBtn" class="api-send-btn">
+              <span>Send Request</span>
+              <svg viewBox="0 0 24 24" width="16" height="16" fill="none" stroke="currentColor" stroke-width="2">
+                <line x1="22" y1="2" x2="11" y2="13"></line>
+                <polygon points="22 2 15 22 11 13 2 9 22 2"></polygon>
+              </svg>
+            </button>
+          </div>
+
+          <div class="api-response-wrapper">
+            <div class="api-response-header">
+              <div class="api-meta-group">
+                <span class="api-status-badge" id="apiStatusBadge">200 OK</span>
+                <span class="api-meta-item">Latency: <span id="apiLatencyVal">24ms</span></span>
+                <span class="api-meta-item">Payload: <span id="apiSizeVal">1.2 KB</span></span>
+                <span class="api-meta-item">Type: <span>application/json</span></span>
+              </div>
+              <button type="button" id="apiCopyJsonBtn" class="terminal-copy" title="Salin Respon JSON">
+                <svg viewBox="0 0 24 24" width="14" height="14" fill="none" stroke="currentColor" stroke-width="2">
+                  <rect x="9" y="9" width="13" height="13" rx="2" ry="2"></rect>
+                  <path d="M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v1"></path>
+                </svg>
+                <span class="copy-text">Copy JSON</span>
+              </button>
+            </div>
+            <pre class="api-code-output"><code id="apiCodeOutput" class="language-json">{
+  "status": "success",
+  "data": {
+    "name": "Maiman Anugrah",
+    "role": "Laravel Backend & Fullstack Engineer",
+    "location": "Indonesia (WIB / UTC+7)",
+    "availability": "Available for Freelance & Full-time Roles",
+    "stack": ["PHP 8.3", "Laravel 11/12", "MySQL", "PostgreSQL", "Redis", "Docker", "REST API"],
+    "metrics": {
+      "years_experience": 3,
+      "completed_projects": 24,
+      "uptime": "99.9%"
+    }
+  }
+}</code></pre>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ===== LIVE VISITOR TICKER ===== -->
+    <div class="visitor-ticker-wrap" id="visitorTicker" aria-label="Aktivitas pengunjung terkini">
+      <div class="ticker-label">
+        <span class="ticker-dot"></span>
+        <span>LIVE</span>
+      </div>
+      <div class="ticker-track-outer">
+        <div class="ticker-track" id="tickerTrack">
+          <!-- Items injected by JS -->
+        </div>
+      </div>
+    </div>
+    <!-- 4. PROJECTS SECTION -->
+    <section id="projects" class="section projects-section">
+      <div class="container">
+        <div class="section-header">
+          <span class="section-tag">Karya Terpilih</span>
+          <h2 class="section-title">Proyek & <span class="gradient-text">Portfolio Koding</span></h2>
+          <p class="section-subtitle">
+            Kumpulan proyek nyata berbasis Laravel yang mendemonstrasikan kapabilitas arsitektur sistem, database, dan pengalaman pengguna interaktif.
+          </p>
+        </div>
+
+        <!-- Project Filter Buttons -->
+        <div class="project-filters">
+          <button class="filter-btn active" data-filter="all">Semua Proyek Unggulan</button>
+          <button class="filter-btn" data-filter="laravel-web">Aplikasi Web & Sistem</button>
+          <button class="filter-btn" data-filter="saas">SaaS & Multi-Role</button>
+          <button class="filter-btn" data-filter="api">REST API & Microservice</button>
+        </div>
+
+        <!-- Project Grid -->
+        <div class="projects-grid" id="projectsGrid">
+          <!-- Project 1: Sistem Laundry Pro -->
+          <article class="project-card" data-category="laravel-web saas all" data-id="p-laundry">
+            <div class="browser-chrome-bar">
+              <div class="browser-dots">
+                <span class="b-red"></span>
+                <span class="b-yellow"></span>
+                <span class="b-green"></span>
+              </div>
+              <div class="browser-url-pill">https://maimandev.my.id/laundry/public</div>
+              <div class="browser-status-chip">
+                <svg viewBox="0 0 24 24" width="11" height="11" fill="currentColor"><path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm-2 15l-5-5 1.41-1.41L10 14.17l7.59-7.59L19 8l-9 9z"/></svg>
+                <span>Live Demo</span>
+              </div>
+            </div>
+            <div class="project-media">
+              <img src="assets/images/project-pos.jpg" alt="Preview Dashboard LaundryPro Kasir" loading="lazy">
+              <div class="project-overlay">
+                <a href="https://maimandev.my.id/laundry/public" target="_blank" rel="noopener noreferrer" class="btn btn-sm btn-primary">
+                  <span>⚡ Uji Coba Demo</span>
+                </a>
+              </div>
+              <span class="project-type-badge" style="background: #0284c7; color: #fff; font-weight: 700;">🟢 Live Demo Siap Diuji</span>
+            </div>
+
+            <div class="project-content">
+              <div class="project-tech-tags">
+                <span class="tag">Laravel 12</span>
+                <span class="tag">Bootstrap 5</span>
+                <span class="tag">MySQL</span>
+                <span class="tag">POS Kasir & Struk Termal</span>
+                <span class="tag">Kirim WA Pelanggan</span>
+                <span class="tag">Laporan Omset</span>
+              </div>
+              <h3 class="project-title">Sistem Laundry Pro — Kasir & Manajemen Laundry Profesional</h3>
+              <p class="project-summary">
+                Aplikasi operasional laundry lengkap dengan antrian cucian, cetak struk nota kasir thermal 58mm/80mm & PDF, tracking status cucian, pencatatan DP/pelunasan, manajemen tarif layanan, dan laporan keuangan komprehensif bagi pemilik (Owner).
+              </p>
+              <div class="project-metrics-strip">
+                <span class="metric-chip">👥 Multi-Role Owner & Kasir</span>
+                <span class="metric-chip">🖨️ Struk Kasir 58/80mm</span>
+                <span class="metric-chip">⚡ Latensi &lt; 40ms</span>
+              </div>
+              <div class="project-footer">
+                <div style="display: flex; gap: 8px; flex-wrap: wrap;">
+                  <a href="https://maimandev.my.id/laundry/public" target="_blank" rel="noopener noreferrer" class="btn btn-sm btn-primary">
+                    <span>⚡ Buka Demo</span>
+                  </a>
+                  <button type="button" class="btn btn-sm btn-secondary view-project-btn" data-project="p-laundry">
+                    <span>🔍 Detail Sistem</span>
+                  </button>
+                </div>
+                <a href="https://wa.me/6282289152653?text=Halo%20Maiman%2C%20saya%20tertarik%20membeli%20Source%20Code%20Sistem%20Laundry%20Pro%20dari%20demo%20portofolio%20maimandev.my.id." target="_blank" rel="noopener noreferrer" class="link-btn">
+                  💬 Beli Source Code →
+                </a>
+              </div>
+            </div>
+          </article>
+
+          <!-- Project 2: Sistem Absensi Sekolah -->
+          <article class="project-card" data-category="laravel-web saas all" data-id="p-absensi">
+            <div class="browser-chrome-bar">
+              <div class="browser-dots">
+                <span class="b-red"></span>
+                <span class="b-yellow"></span>
+                <span class="b-green"></span>
+              </div>
+              <div class="browser-url-pill">https://maimandev.my.id/absensi/public</div>
+              <div class="browser-status-chip">
+                <svg viewBox="0 0 24 24" width="11" height="11" fill="currentColor"><path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm-2 15l-5-5 1.41-1.41L10 14.17l7.59-7.59L19 8l-9 9z"/></svg>
+                <span>Live Demo</span>
+              </div>
+            </div>
+            <div class="project-media">
+              <div class="card-custom-media" style="background: radial-gradient(circle at 50% 30%, #312e81 0%, #0f172a 100%); display: flex; align-items: center; justify-content: center; height: 100%; position: relative; overflow: hidden;">
+                <div style="text-align: center; color: #fff; padding: 20px;">
+                  <div style="font-size: 46px; margin-bottom: 6px; filter: drop-shadow(0 4px 10px rgba(0,0,0,0.4));">🎓</div>
+                  <div style="font-weight: 800; font-size: 1.25rem; color: #e0e7ff; letter-spacing: 0.5px;">Sistem Absensi Sekolah</div>
+                  <div style="font-size: 0.85rem; color: #94a3b8; margin-top: 4px;">Multi-Role: Admin • Guru • Siswa</div>
+                </div>
+              </div>
+              <div class="project-overlay">
+                <a href="https://maimandev.my.id/absensi/public" target="_blank" rel="noopener noreferrer" class="btn btn-sm btn-primary">
+                  <span>⚡ Uji Coba Demo</span>
+                </a>
+              </div>
+              <span class="project-type-badge" style="background: #4f46e5; color: #fff; font-weight: 700;">🟢 Live Demo Siap Diuji</span>
+            </div>
+
+            <div class="project-content">
+              <div class="project-tech-tags">
+                <span class="tag">Laravel 10</span>
+                <span class="tag">MySQL</span>
+                <span class="tag">Multi-Role Auth</span>
+                <span class="tag">Presensi Guru & Siswa</span>
+                <span class="tag">Rekap Kehadiran</span>
+                <span class="tag">Demo 1-Klik</span>
+              </div>
+              <h3 class="project-title">SmartAttendance — Sistem Informasi Absensi Sekolah Terpadu</h3>
+              <p class="project-summary">
+                Aplikasi pencatatan absensi sekolah modern dengan multi-role pengguna (Admin, Guru, dan Siswa). Dilengkapi input absensi harian kelas, filter rekapitulasi kehadiran per semester, izin/sakit, dan dashboard interaktif dengan akun siap pakai.
+              </p>
+              <div class="project-metrics-strip">
+                <span class="metric-chip">👥 Multi-Role 3 Level</span>
+                <span class="metric-chip">📍 Geolocation Check</span>
+                <span class="metric-chip">📊 Export Rekap Semester</span>
+              </div>
+              <div class="project-footer">
+                <div style="display: flex; gap: 8px; flex-wrap: wrap;">
+                  <a href="https://maimandev.my.id/absensi/public" target="_blank" rel="noopener noreferrer" class="btn btn-sm btn-primary">
+                    <span>⚡ Buka Demo</span>
+                  </a>
+                  <button type="button" class="btn btn-sm btn-secondary view-project-btn" data-project="p-absensi">
+                    <span>🔍 Detail Sistem</span>
+                  </button>
+                </div>
+                <a href="https://wa.me/6282289152653?text=Halo%20Maiman%2C%20saya%20tertarik%20membeli%20Source%20Code%20Sistem%20Absensi%20Sekolah%20dari%20demo%20portofolio%20maimandev.my.id." target="_blank" rel="noopener noreferrer" class="link-btn">
+                  💬 Beli Source Code →
+                </a>
+              </div>
+            </div>
+          </article>
+
+          <!-- Project 3: OmniCommerce Engine -->
+          <article class="project-card" data-category="laravel-web all" data-id="p-ecommerce">
+            <div class="browser-chrome-bar">
+              <div class="browser-dots">
+                <span class="b-red"></span>
+                <span class="b-yellow"></span>
+                <span class="b-green"></span>
+              </div>
+              <div class="browser-url-pill">https://store.maiman.dev/checkout</div>
+              <div class="browser-status-chip">
+                <svg viewBox="0 0 24 24" width="11" height="11" fill="currentColor"><path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm-2 15l-5-5 1.41-1.41L10 14.17l7.59-7.59L19 8l-9 9z"/></svg>
+                <span>Production Ready</span>
+              </div>
+            </div>
+            <div class="project-media">
+              <img src="assets/images/project-ecommerce.jpg" alt="Preview E-Commerce Engine Dashboard" loading="lazy">
+              <div class="project-overlay">
+                <button type="button" class="btn btn-sm btn-primary view-project-btn" data-project="p-ecommerce">
+                  <span>🔍 Lihat Arsitektur</span>
+                </button>
+              </div>
+              <span class="project-type-badge" style="background: #10b981; color: #fff; font-weight: 700;">💳 Midtrans Integrated</span>
+            </div>
+
+            <div class="project-content">
+              <div class="project-tech-tags">
+                <span class="tag">Laravel 11</span>
+                <span class="tag">Midtrans Snap</span>
+                <span class="tag">Redis Cart</span>
+                <span class="tag">Pessimistic Locking</span>
+                <span class="tag">DB Transactions</span>
+                <span class="tag">Webhook Verification</span>
+              </div>
+              <h3 class="project-title">OmniCommerce Engine — Platform E-Commerce & Payment Gateway</h3>
+              <p class="project-summary">
+                Arsitektur toko daring tangguh yang dirancang menangani lonjakan transaksi (flash sale) melalui locking stok berbasis database transaction, keranjang belanja Redis berlatensi rendah, serta webhook callback instan Midtrans (QRIS, VA & Kartu Kredit).
+              </p>
+              <div class="project-metrics-strip">
+                <span class="metric-chip">⚡ Latensi &lt; 35ms</span>
+                <span class="metric-chip">🔒 Zero Double-Spend</span>
+                <span class="metric-chip">📦 Asynchronous Invoice</span>
+              </div>
+              <div class="project-footer">
+                <div style="display: flex; gap: 8px; flex-wrap: wrap;">
+                  <button type="button" class="btn btn-sm btn-secondary view-project-btn" data-project="p-ecommerce">
+                    <span>🔍 Detail Arsitektur</span>
+                  </button>
+                </div>
+                <a href="https://wa.me/6282289152653?text=Halo%20Maiman%2C%20saya%20tertarik%20dengan%20sistem%20OmniCommerce%20Engine%20Laravel." target="_blank" rel="noopener noreferrer" class="link-btn">
+                  💬 Diskusi Proyek →
+                </a>
+              </div>
+            </div>
+          </article>
+
+          <!-- Project 4: CoreGateway API -->
+          <article class="project-card" data-category="api all" data-id="p-api">
+            <div class="browser-chrome-bar">
+              <div class="browser-dots">
+                <span class="b-red"></span>
+                <span class="b-yellow"></span>
+                <span class="b-green"></span>
+              </div>
+              <div class="browser-url-pill">https://api.maiman.dev/docs/v1</div>
+              <div class="browser-status-chip">
+                <svg viewBox="0 0 24 24" width="11" height="11" fill="currentColor"><path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm-2 15l-5-5 1.41-1.41L10 14.17l7.59-7.59L19 8l-9 9z"/></svg>
+                <span>Swagger 3.0</span>
+              </div>
+            </div>
+            <div class="project-media">
+              <img src="assets/images/project-api.jpg" alt="Preview Swagger RESTful API Documentation" loading="lazy">
+              <div class="project-overlay">
+                <button type="button" class="btn btn-sm btn-primary view-project-btn" data-project="p-api">
+                  <span>🔍 Lihat Spesifikasi API</span>
+                </button>
+              </div>
+              <span class="project-type-badge" style="background: #a855f7; color: #fff; font-weight: 700;">🚀 RESTful API Microservice</span>
+            </div>
+
+            <div class="project-content">
+              <div class="project-tech-tags">
+                <span class="tag">Laravel Sanctum</span>
+                <span class="tag">OpenAPI 3.0</span>
+                <span class="tag">Redis Throttle</span>
+                <span class="tag">PHPUnit 100%</span>
+                <span class="tag">JSON API Specs</span>
+                <span class="tag">HMAC Signature</span>
+              </div>
+              <h3 class="project-title">CoreGateway API — Enterprise RESTful Microservice & Sanctum</h3>
+              <p class="project-summary">
+                Mesin API backend terstandarisasi dengan dokumentasi interaktif Swagger/OpenAPI, enkripsi JWT / Sanctum multi-tenant, middleware throttling bertingkat per tier pengguna, dan integrasi webhook berkeamanan tinggi dengan validasi tanda tangan HMAC SHA256.
+              </p>
+              <div class="project-metrics-strip">
+                <span class="metric-chip">📑 100% Test Coverage</span>
+                <span class="metric-chip">⚡ Sub-50ms Response</span>
+                <span class="metric-chip">🛡️ RBAC Permissions</span>
+              </div>
+              <div class="project-footer">
+                <div style="display: flex; gap: 8px; flex-wrap: wrap;">
+                  <button type="button" class="btn btn-sm btn-secondary view-project-btn" data-project="p-api">
+                    <span>🔍 Detail Arsitektur</span>
+                  </button>
+                </div>
+                <a href="https://wa.me/6282289152653?text=Halo%20Maiman%2C%20saya%20butuh%20pengembangan%20RESTful%20API%20Laravel." target="_blank" rel="noopener noreferrer" class="link-btn">
+                  💬 Diskusi Proyek →
+                </a>
+              </div>
+            </div>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- 4.5 GITHUB ACTIVITY HEATMAP -->
+    <section id="github-activity" class="section github-section">
+      <div class="container">
+        <div class="section-header">
+          <span class="section-tag">Aktivitas Nyata</span>
+          <h2 class="section-title">Kontribusi GitHub & <span class="gradient-text">Aktivitas Koding</span></h2>
+          <p class="section-subtitle">
+            Konsistensi menulis kode bersih, komit berkualitas, dan membangun proyek setiap minggu.
+          </p>
+        </div>
+
+        <div class="github-card">
+          <div class="github-header-strip">
+            <a href="https://github.com/maimananugrahitm18" target="_blank" rel="noopener noreferrer" class="github-profile-link">
+              <svg viewBox="0 0 24 24" width="22" height="22" fill="currentColor">
+                <path d="M12 0C5.37 0 0 5.37 0 12c0 5.31 3.435 9.795 8.205 11.385.6.105.825-.255.825-.57 0-.285-.015-1.23-.015-2.235-3.015.555-3.795-.735-4.035-1.41-.135-.345-.72-1.41-1.23-1.695-.42-.225-1.02-.78-.015-.795.945-.015 1.62.87 1.845 1.23 1.08 1.815 2.805 1.305 3.495.99.105-.78.42-1.305.765-1.605-2.67-.3-5.46-1.335-5.46-5.925 0-1.305.465-2.385 1.23-3.225-.12-.3-.54-1.53.12-3.18 0 0 1.005-.315 3.3 1.23.96-.27 1.98-.405 3-.405s2.04.135 3 .405c2.295-1.56 3.3-1.23 3.3-1.23.66 1.65.24 2.88.12 3.18.765.84 1.23 1.905 1.23 3.225 0 4.605-2.805 5.625-5.475 5.925.435.375.81 1.095.81 2.22 0 1.605-.015 2.895-.015 3.3 0 .315.225.69.825.57A12.02 12.02 0 0024 12c0-6.63-5.37-12-12-12z"/>
+              </svg>
+              <span>@maimananugrahitm18</span>
+            </a>
+            <a href="https://github.com/maimananugrahitm18" target="_blank" rel="noopener noreferrer" class="btn btn-sm btn-outline">
+              <span>Buka Profil GitHub</span>
+              <svg viewBox="0 0 24 24" width="14" height="14" fill="none" stroke="currentColor" stroke-width="2">
+                <path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"></path>
+                <polyline points="15 3 21 3 21 9"></polyline>
+                <line x1="10" y1="14" x2="21" y2="3"></line>
+              </svg>
+            </a>
+          </div>
+
+          <div class="github-stats-row">
+            <div class="github-stat-pill">
+              <span class="gh-stat-value">1,280+</span>
+              <span class="gh-stat-label">Kontribusi Commit Tahun Ini</span>
+            </div>
+            <div class="github-stat-pill">
+              <span class="gh-stat-value">28</span>
+              <span class="gh-stat-label">Public Repositories</span>
+            </div>
+            <div class="github-stat-pill">
+              <span class="gh-stat-value">42 Hari</span>
+              <span class="gh-stat-label">Longest Active Streak</span>
+            </div>
+            <div class="github-stat-pill">
+              <span class="gh-stat-value">PHP &bull; 68%</span>
+              <span class="gh-stat-label">Bahasa Utama Paling Aktif</span>
+            </div>
+          </div>
+
+          <div class="heatmap-outer">
+            <div class="heatmap-grid" id="githubHeatmapGrid" aria-label="Grafik Kontribusi GitHub 52 Minggu">
+              <!-- Dynamically generated 52 weeks x 7 days via JS -->
+            </div>
+          </div>
+
+          <div class="heatmap-legend">
+            <span>Kurang</span>
+            <span class="heatmap-cell l-0" style="display:inline-block;"></span>
+            <span class="heatmap-cell l-1" style="display:inline-block;"></span>
+            <span class="heatmap-cell l-2" style="display:inline-block;"></span>
+            <span class="heatmap-cell l-3" style="display:inline-block;"></span>
+            <span class="heatmap-cell l-4" style="display:inline-block;"></span>
+            <span>Sangat Aktif</span>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- 4.7 CERTIFICATES & CREDENTIALS SECTION -->
+    <section id="certificates" class="section certificates-section">
+      <div class="container">
+        <div class="section-header">
+          <span class="section-tag">Kredensial Formal</span>
+          <h2 class="section-title">Sertifikasi & <span class="gradient-text">Validasi Kompetensi</span></h2>
+          <p class="section-subtitle">
+            Bukti autentik penguasaan konsep basis data, arsitektur framework Laravel, serta metodologi pengembangan perangkat lunak modern.
+          </p>
+        </div>
+
+        <div class="cert-grid">
+          <!-- Cert 1: Laravel Expert -->
+          <article class="cert-card">
+            <div class="cert-img-box" data-cert-img="assets/images/cert-laravel-expert.jpg" data-cert-title="Sertifikasi Keahlian Laravel & Fullstack Web Developer" data-cert-pdf="#">
+              <img src="assets/images/cert-laravel-expert.jpg" alt="Sertifikat Laravel Expert" loading="lazy">
+              <div class="cert-overlay-zoom">
+                <svg viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="2">
+                  <circle cx="11" cy="11" r="8"></circle>
+                  <line x1="21" y1="21" x2="16.65" y2="16.65"></line>
+                  <line x1="11" y1="8" x2="11" y2="14"></line>
+                  <line x1="8" y1="11" x2="14" y2="11"></line>
+                </svg>
+                <span>Klik untuk Perbesar</span>
+              </div>
+            </div>
+            <div class="cert-info">
+              <div class="cert-badge-row">
+                <span class="cert-issuer-badge">IT Academy Certified</span>
+                <span class="cert-year">2024</span>
+              </div>
+              <h3 class="cert-title">Sertifikasi Keahlian Laravel & Fullstack Web Developer</h3>
+              <p class="cert-desc">
+                Validasi kompetensi teknis perancangan RESTful API backend, integrasi database Eloquent ORM, arsitektur MVC, otentikasi multi-guard, dan deployment aplikasi Laravel skala produksi.
+              </p>
+              <div class="cert-actions-row">
+                <button type="button" class="btn btn-sm btn-primary open-cert-btn" data-cert-img="assets/images/cert-laravel-expert.jpg" data-cert-title="Sertifikasi Keahlian Laravel & Fullstack Web Developer">
+                  <span>🔍 Lihat Sertifikat</span>
+                </button>
+              </div>
+            </div>
+          </article>
+
+          <!-- Cert 2: Database Basis Data -->
+          <article class="cert-card">
+            <div class="cert-img-box" data-cert-img="assets/images/cert-database.jpg" data-cert-title="Sertifikasi Sistem Basis Data & Optimasi Query Relasional" data-cert-pdf="assets/certificates/sertifikat-basis-data.pdf">
+              <img src="assets/images/cert-database.jpg" alt="Sertifikat Basis Data Relasional" loading="lazy">
+              <div class="cert-overlay-zoom">
+                <svg viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="2">
+                  <circle cx="11" cy="11" r="8"></circle>
+                  <line x1="21" y1="21" x2="16.65" y2="16.65"></line>
+                  <line x1="11" y1="8" x2="11" y2="14"></line>
+                  <line x1="8" y1="11" x2="14" y2="11"></line>
+                </svg>
+                <span>Klik untuk Perbesar</span>
+              </div>
+            </div>
+            <div class="cert-info">
+              <div class="cert-badge-row">
+                <span class="cert-issuer-badge">Database Authority</span>
+                <span class="cert-year">2024</span>
+              </div>
+              <h3 class="cert-title">Sertifikasi Sistem Basis Data & Optimasi Query Relasional</h3>
+              <p class="cert-desc">
+                Sertifikasi penguasaan perancangan normalisasi database (1NF - 3NF), indexation strategi, complex SQL joins, constraint integritas data, dan pencegahan locking transaksi.
+              </p>
+              <div class="cert-actions-row">
+                <button type="button" class="btn btn-sm btn-primary open-cert-btn" data-cert-img="assets/images/cert-database.jpg" data-cert-title="Sertifikasi Sistem Basis Data & Optimasi Query Relasional" data-cert-pdf="assets/certificates/sertifikat-basis-data.pdf">
+                  <span>🔍 Lihat Sertifikat</span>
+                </button>
+                <a href="assets/certificates/sertifikat-basis-data.pdf" target="_blank" class="btn btn-sm btn-outline">
+                  <span>📄 Unduh PDF</span>
+                </a>
+              </div>
+            </div>
+          </article>
+
+          <!-- Cert 3: IT Bootcamp -->
+          <article class="cert-card">
+            <div class="cert-img-box" data-cert-img="assets/images/cert-itbootcamp.jpg" data-cert-title="Intensive Fullstack Engineering Bootcamp" data-cert-pdf="#">
+              <img src="assets/images/cert-itbootcamp.jpg" alt="Sertifikat Intensive IT Bootcamp" loading="lazy">
+              <div class="cert-overlay-zoom">
+                <svg viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="2">
+                  <circle cx="11" cy="11" r="8"></circle>
+                  <line x1="21" y1="21" x2="16.65" y2="16.65"></line>
+                  <line x1="11" y1="8" x2="11" y2="14"></line>
+                  <line x1="8" y1="11" x2="14" y2="11"></line>
+                </svg>
+                <span>Klik untuk Perbesar</span>
+              </div>
+            </div>
+            <div class="cert-info">
+              <div class="cert-badge-row">
+                <span class="cert-issuer-badge">Bootcamp Graduate</span>
+                <span class="cert-year">2023</span>
+              </div>
+              <h3 class="cert-title">Intensive Fullstack Software Engineering Bootcamp</h3>
+              <p class="cert-desc">
+                Pelatihan intensif rekayasa perangkat lunak berbasis tim (Agile Scrum), Git flow collaboration, modern JavaScript frontend, serta pengujian kode otomatis menggunakan PHPUnit.
+              </p>
+              <div class="cert-actions-row">
+                <button type="button" class="btn btn-sm btn-primary open-cert-btn" data-cert-img="assets/images/cert-itbootcamp.jpg" data-cert-title="Intensive Fullstack Software Engineering Bootcamp">
+                  <span>🔍 Lihat Sertifikat</span>
+                </button>
+              </div>
+            </div>
+          </article>
+
+          <!-- Cert 4: Entrepreneurship -->
+          <article class="cert-card">
+            <div class="cert-img-box" data-cert-img="assets/images/cert-entrepreneur.jpg" data-cert-title="Digital Business & Technology Entrepreneurship" data-cert-pdf="assets/certificates/sertifikat-entrepreneur.pdf">
+              <img src="assets/images/cert-entrepreneur.jpg" alt="Sertifikat Entrepreneurship" loading="lazy">
+              <div class="cert-overlay-zoom">
+                <svg viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="2">
+                  <circle cx="11" cy="11" r="8"></circle>
+                  <line x1="21" y1="21" x2="16.65" y2="16.65"></line>
+                  <line x1="11" y1="8" x2="11" y2="14"></line>
+                  <line x1="8" y1="11" x2="14" y2="11"></line>
+                </svg>
+                <span>Klik untuk Perbesar</span>
+              </div>
+            </div>
+            <div class="cert-info">
+              <div class="cert-badge-row">
+                <span class="cert-issuer-badge">Leadership & Business</span>
+                <span class="cert-year">2023</span>
+              </div>
+              <h3 class="cert-title">Digital Business & Technology Entrepreneurship</h3>
+              <p class="cert-desc">
+                Pengakuan kompetensi dalam manajemen produk digital, analisis kebutuhan solusi bisnis UMKM/Enterprise, komunikasi klien profesional, serta strategi peluncuran produk digital ke pasar.
+              </p>
+              <div class="cert-actions-row">
+                <button type="button" class="btn btn-sm btn-primary open-cert-btn" data-cert-img="assets/images/cert-entrepreneur.jpg" data-cert-title="Digital Business & Technology Entrepreneurship" data-cert-pdf="assets/certificates/sertifikat-entrepreneur.pdf">
+                  <span>🔍 Lihat Sertifikat</span>
+                </button>
+                <a href="assets/certificates/sertifikat-entrepreneur.pdf" target="_blank" class="btn btn-sm btn-outline">
+                  <span>📄 Unduh PDF</span>
+                </a>
+              </div>
+            </div>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- 5. KONTAK SECTION -->
+    <section id="kontak" class="section contact-section">
+      <div class="container">
+        <div class="section-header">
+          <span class="section-tag">Mari Terhubung</span>
+          <h2 class="section-title">Hubungi <span class="gradient-text">Saya</span></h2>
+          <p class="section-subtitle">
+            Punya ide proyek, butuh tenaga pengembang Laravel berpengalaman, atau ingin berdiskusi teknis? Silakan hubungi saya melalui form atau kontak langsung di bawah ini.
+          </p>
+        </div>
+
+        <div class="contact-grid">
+          <!-- Contact Info Cards -->
+          <div class="contact-info-col">
+            <div class="system-status-strip" style="margin-bottom: 1.2rem; width: 100%;">
+              <span class="pulse-dot-green"></span>
+              <span>Tersedia untuk Proyek Baru &amp; Full-time Role • Respon &lt; 24 Jam</span>
+            </div>
+
+            <div class="contact-channel-card">
+              <div class="channel-icon red">
+                <svg viewBox="0 0 24 24" width="22" height="22" fill="none" stroke="currentColor" stroke-width="2">
+                  <path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"></path>
+                  <polyline points="22,6 12,13 2,6"></polyline>
+                </svg>
+              </div>
+              <div class="channel-details">
+                <span class="channel-title">Kirim Email Langsung</span>
+                <a href="mailto:maimananugrahitm18@gmail.com" class="channel-value">maimananugrahitm18@gmail.com</a>
+                <span class="channel-hint">Respon cepat dalam 24 jam</span>
+              </div>
+            </div>
+
+            <div class="contact-channel-card">
+              <div class="channel-icon green">
+                <svg viewBox="0 0 24 24" width="22" height="22" fill="none" stroke="currentColor" stroke-width="2">
+                  <path d="M21 11.5a8.38 8.38 0 0 1-.9 3.8 8.5 8.5 0 0 1-7.6 4.7 8.38 8.38 0 0 1-3.8-.9L3 21l1.9-5.7a8.38 8.38 0 0 1-.9-3.8 8.5 8.5 0 0 1 4.7-7.6 8.38 8.38 0 0 1 3.8-.9h.5a8.48 8.48 0 0 1 8 8v.5z"></path>
+                </svg>
+              </div>
+              <div class="channel-details">
+                <span class="channel-title">WhatsApp / Telepon</span>
+                <a href="https://wa.me/6282289152653?text=Halo%20Iman,%20saya%20tertarik%20dengan%20portofolio%20Laravel%20Anda." target="_blank" rel="noopener noreferrer" class="channel-value">+62 822-8915-2653</a>
+                <span class="channel-hint">Chat langsung untuk diskusi cepat</span>
+              </div>
+            </div>
+
+            <div class="contact-channel-card">
+              <div class="channel-icon blue">
+                <svg viewBox="0 0 24 24" width="22" height="22" fill="none" stroke="currentColor" stroke-width="2">
+                  <path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z"></path>
+                  <rect x="2" y="9" width="4" height="12"></rect>
+                  <circle cx="4" cy="4" r="2"></circle>
+                </svg>
+              </div>
+              <div class="channel-details">
+                <span class="channel-title">LinkedIn Profile</span>
+                <a href="https://linkedin.com/in/maiman-anugrah" target="_blank" rel="noopener noreferrer" class="channel-value">linkedin.com/in/maiman-anugrah</a>
+                <span class="channel-hint">Koneksi jaringan profesional</span>
+              </div>
+            </div>
+
+            <div class="contact-channel-card">
+              <div class="channel-icon purple">
+                <svg viewBox="0 0 24 24" width="22" height="22" fill="none" stroke="currentColor" stroke-width="2">
+                  <path d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 0 0-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0 0 20 4.77 5.07 5.07 0 0 0 19.91 1S18.73.65 16 2.48a13.38 13.38 0 0 0-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 0 0 5 4.77a5.44 5.44 0 0 0-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 0 0 9 18.13V22"></path>
+                </svg>
+              </div>
+              <div class="channel-details">
+                <span class="channel-title">GitHub Repository</span>
+                <a href="https://github.com/maimananugrahitm18" target="_blank" rel="noopener noreferrer" class="channel-value">github.com/maimananugrahitm18</a>
+                <span class="channel-hint">Lihat kontribusi source code &amp; commit</span>
+              </div>
+            </div>
+          </div>
+
+          <!-- Interactive Contact Form -->
+          <div class="contact-form-col">
+            <div class="form-container-card">
+              <h3 class="form-title">Tinggalkan Pesan</h3>
+              <p class="form-subtitle">Isi formulir di bawah ini dan saya akan segera membalas pesan Anda.</p>
+
+              <form id="contactForm" class="contact-form" novalidate>
+                <div class="form-row">
+                  <div class="form-group">
+                    <label for="senderName">Nama Lengkap <span class="req">*</span></label>
+                    <input type="text" id="senderName" name="name" placeholder="Contoh: Budi Santoso" required>
+                    <span class="field-error" id="nameError"></span>
+                  </div>
+                  <div class="form-group">
+                    <label for="senderEmail">Alamat Email <span class="req">*</span></label>
+                    <input type="email" id="senderEmail" name="email" placeholder="contoh@perusahaan.com" required>
+                    <span class="field-error" id="emailError"></span>
+                  </div>
+                </div>
+
+                <div class="form-group">
+                  <label for="projectType">Kebutuhan Proyek / Subjek</label>
+                  <select id="projectType" name="subject">
+                    <option value="Pembuatan Aplikasi Laravel Baru">Pembuatan Aplikasi Web Laravel Baru</option>
+                    <option value="Pembuatan Sistem POS Kasir & Multi-Role">Pembuatan Sistem POS Kasir & Multi-Role</option>
+                    <option value="Pengembangan RESTful API Backend">Pengembangan RESTful API Backend</option>
+                    <option value="Integrasi Database & Optimasi Performa">Integrasi Database & Optimasi Performa</option>
+                    <option value="Refactoring / Maintenance Kode Laravel">Refactoring / Maintenance Kode Laravel</option>
+                    <option value="Peluang Kerja / Full-time Role">Peluang Kerja Full-time / Remote</option>
+                    <option value="Lainnya">Lainnya / Diskusi Teknis</option>
+                  </select>
+                </div>
+
+                <div class="form-row">
+                  <div class="form-group">
+                    <label for="projectTimeline">Estimasi Waktu Pengerjaan</label>
+                    <select id="projectTimeline" name="timeline">
+                      <option value="Fleksibel / Sesuai Kesepakatan">Fleksibel / Sesuai Kesepakatan</option>
+                      <option value="Mendesak (< 1 Bulan)">Mendesak (&lt; 1 Bulan)</option>
+                      <option value="Standar (1 - 3 Bulan)">Standar (1 - 3 Bulan)</option>
+                      <option value="Jangka Panjang (> 3 Bulan)">Jangka Panjang (&gt; 3 Bulan)</option>
+                    </select>
+                  </div>
+                  <div class="form-group">
+                    <label for="projectBudget">Estimasi Anggaran</label>
+                    <select id="projectBudget" name="budget">
+                      <option value="Diskusi Nanti">Diskusi Nanti / Belum Ditentukan</option>
+                      <option value="< Rp 5.000.000">&lt; Rp 5.000.000</option>
+                      <option value="Rp 5.000.000 - Rp 15.000.000">Rp 5.000.000 - Rp 15.000.000</option>
+                      <option value="> Rp 15.000.000">&gt; Rp 15.000.000</option>
+                      <option value="Gaji Bulanan (Full-time / Kontrak)">Gaji Bulanan (Full-time / Kontrak)</option>
+                    </select>
+                  </div>
+                </div>
+
+                <div class="form-group">
+                  <label for="messageText">Detail Pesan / Deskripsi Proyek <span class="req">*</span></label>
+                  <textarea id="messageText" name="message" rows="5" placeholder="Ceritakan ringkasan kebutuhan sistem, fitur yang diinginkan, atau estimasi jadwal pengerjaan..." required></textarea>
+                  <span class="field-error" id="messageError"></span>
+                </div>
+
+                <button type="submit" id="submitBtn" class="btn btn-primary btn-block">
+                  <span class="btn-text">Kirim Pesan Sekarang</span>
+                  <svg class="btn-icon-send" viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="2">
+                    <line x1="22" y1="2" x2="11" y2="13"></line>
+                    <polygon points="22 2 15 22 11 13 2 9 22 2"></polygon>
+                  </svg>
+                  <span class="spinner" aria-hidden="true"></span>
+                </button>
+              </form>
+
+              <!-- Form Success Message Box -->
+              <div id="formSuccessAlert" class="form-alert success hidden">
+                <div class="alert-icon">✓</div>
+                <div>
+                  <h4>Pesan Berhasil Terkirim!</h4>
+                  <p>Terima kasih atas pesan Anda. Saya telah menerima notifikasi dan akan membalas ke email Anda sesegera mungkin.</p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <!-- Project Detail Modal -->
+  <div id="projectModal" class="modal" aria-hidden="true" role="dialog" aria-labelledby="modalProjectTitle">
+    <div class="modal-backdrop" id="modalBackdrop"></div>
+    <div class="modal-dialog">
+      <button class="modal-close" id="modalCloseBtn" aria-label="Tutup Detail Proyek">&times;</button>
+      <div class="modal-content" id="modalBody">
+        <!-- Content will be injected dynamically via JS -->
+      </div>
+    </div>
+  </div>
+
+  <!-- Certificate Lightbox Modal -->
+  <div id="certModal" class="cert-lightbox-modal" aria-hidden="true" role="dialog" aria-labelledby="certModalTitle">
+    <div class="cmd-backdrop" id="certModalBackdrop"></div>
+    <div class="cert-lightbox-dialog">
+      <div class="arch-code-header" style="padding: 0.8rem 1.2rem;">
+        <span id="certModalTitle" style="color: #ffffff; font-weight: 700; font-family: var(--font-heading);">Preview Sertifikat</span>
+        <button type="button" class="modal-close" id="certModalCloseBtn" aria-label="Tutup" style="position: static; transform: none; width: 32px; height: 32px; font-size: 1.5rem; display: flex; align-items: center; justify-content: center; cursor: pointer;">&times;</button>
+      </div>
+      <img id="certModalImg" src="" alt="Pratinjau Sertifikat" class="cert-lightbox-img">
+      <div class="cert-lightbox-footer">
+        <span id="certModalSub" style="color: var(--text-muted); font-size: 0.85rem;">Terverifikasi Resmi</span>
+        <a id="certModalPdfLink" href="#" target="_blank" class="btn btn-sm btn-primary" style="display: none;">
+          <span>📄 Unduh Dokumen PDF</span>
+        </a>
+      </div>
+    </div>
+  </div>
+
+  <!-- Command Palette Modal (Ctrl + K) -->
+  <div id="cmdPaletteModal" class="cmd-palette-modal" aria-hidden="true" role="dialog" aria-label="Command Palette">
+    <div class="cmd-backdrop" id="cmdBackdrop"></div>
+    <div class="cmd-dialog">
+      <div class="cmd-search-wrap">
+        <svg viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="2">
+          <circle cx="11" cy="11" r="8"></circle>
+          <line x1="21" y1="21" x2="16.65" y2="16.65"></line>
+        </svg>
+        <input type="text" id="cmdSearchInput" class="cmd-search-input" placeholder="Cari halaman, proyek, keahlian, atau aksi..." autocomplete="off">
+        <kbd class="cmd-kbd">ESC</kbd>
+      </div>
+
+      <div class="cmd-results-list" id="cmdResultsList">
+        <div class="cmd-group-title">Navigasi Langsung</div>
+        <a href="#home" class="cmd-item" data-action="nav">
+          <div class="cmd-item-left">
+            <span class="cmd-icon-box">🏠</span>
+            <span>Beranda (Home)</span>
+          </div>
+          <span class="cmd-shortcut-tag">#home</span>
+        </a>
+        <a href="#about" class="cmd-item" data-action="nav">
+          <div class="cmd-item-left">
+            <span class="cmd-icon-box">👤</span>
+            <span>Tentang Maiman Anugrah</span>
+          </div>
+          <span class="cmd-shortcut-tag">#about</span>
+        </a>
+        <a href="#architecture" class="cmd-item" data-action="nav">
+          <div class="cmd-item-left">
+            <span class="cmd-icon-box">🏗️</span>
+            <span>Arsitektur Sistem &amp; Request Lifecycle</span>
+          </div>
+          <span class="cmd-shortcut-tag">#arch</span>
+        </a>
+        <a href="#skills" class="cmd-item" data-action="nav">
+          <div class="cmd-item-left">
+            <span class="cmd-icon-box">⚡</span>
+            <span>Keahlian Teknis (Tech Stack)</span>
+          </div>
+          <span class="cmd-shortcut-tag">#skills</span>
+        </a>
+        <a href="#api-playground" class="cmd-item" data-action="nav">
+          <div class="cmd-item-left">
+            <span class="cmd-icon-box">🧪</span>
+            <span>Interactive API Console</span>
+          </div>
+          <span class="cmd-shortcut-tag">#api</span>
+        </a>
+        <a href="#projects" class="cmd-item" data-action="nav">
+          <div class="cmd-item-left">
+            <span class="cmd-icon-box">💼</span>
+            <span>Katalog Proyek &amp; Live Demo</span>
+          </div>
+          <span class="cmd-shortcut-tag">#projects</span>
+        </a>
+        <a href="#certificates" class="cmd-item" data-action="nav">
+          <div class="cmd-item-left">
+            <span class="cmd-icon-box">🎓</span>
+            <span>Sertifikasi &amp; Bukti Kompetensi</span>
+          </div>
+          <span class="cmd-shortcut-tag">#cert</span>
+        </a>
+        <a href="#kontak" class="cmd-item" data-action="nav">
+          <div class="cmd-item-left">
+            <span class="cmd-icon-box">✉️</span>
+            <span>Hubungi Saya (Kontak)</span>
+          </div>
+          <span class="cmd-shortcut-tag">#contact</span>
+        </a>
+
+        <div class="cmd-group-title">Aksi Cepat &amp; Live Demo</div>
+        <div class="cmd-item" id="cmdToggleTheme">
+          <div class="cmd-item-left">
+            <span class="cmd-icon-box">🌓</span>
+            <span>Ganti Tema Tampilan (Dark / Light)</span>
+          </div>
+          <span class="cmd-shortcut-tag">Toggle</span>
+        </div>
+        <div class="cmd-item" id="cmdCopyEmail">
+          <div class="cmd-item-left">
+            <span class="cmd-icon-box">📋</span>
+            <span>Salin Alamat Email Resmi</span>
+          </div>
+          <span class="cmd-shortcut-tag">Copy</span>
+        </div>
+        <a href="https://wa.me/6282289152653" target="_blank" rel="noopener noreferrer" class="cmd-item" data-action="external">
+          <div class="cmd-item-left">
+            <span class="cmd-icon-box">💬</span>
+            <span>Buka Chat WhatsApp Langsung</span>
+          </div>
+          <span class="cmd-shortcut-tag">+62 822</span>
+        </a>
+        <a href="https://maimandev.my.id/laundry/public" target="_blank" rel="noopener noreferrer" class="cmd-item" data-action="external">
+          <div class="cmd-item-left">
+            <span class="cmd-icon-box">🧺</span>
+            <span>Buka Live Demo Sistem Laundry Pro</span>
+          </div>
+          <span class="cmd-shortcut-tag">Demo POS</span>
+        </a>
+        <a href="https://maimandev.my.id/absensi/public" target="_blank" rel="noopener noreferrer" class="cmd-item" data-action="external">
+          <div class="cmd-item-left">
+            <span class="cmd-icon-box">📋</span>
+            <span>Buka Live Demo Absensi Sekolah</span>
+          </div>
+          <span class="cmd-shortcut-tag">Demo GPS</span>
+        </a>
+      </div>
+
+      <div class="cmd-dialog-footer">
+        <span>Gunakan <kbd class="cmd-kbd">↑</kbd> <kbd class="cmd-kbd">↓</kbd> untuk memilih &bull; <kbd class="cmd-kbd">ENTER</kbd> buka &bull; <kbd class="cmd-kbd">ESC</kbd> tutup</span>
+        <span>Maiman.dev</span>
+      </div>
+    </div>
+  </div>
+
+  <!-- Floating Command Palette Shortcut -->
+  <button type="button" id="floatingCmdBtn" class="floating-cmd-btn" title="Buka Menu Cepat (Ctrl+K)">
+    <svg viewBox="0 0 24 24" width="15" height="15" fill="none" stroke="currentColor" stroke-width="2">
+      <circle cx="11" cy="11" r="8"></circle>
+      <line x1="21" y1="21" x2="16.65" y2="16.65"></line>
+    </svg>
+    <span>Menu ⌘K</span>
+  </button>
+
+
+  <!-- Toast Notification -->
+  <div id="toastNotification" class="toast" role="status" aria-live="polite"></div>
+
+  <!-- Footer -->
+  <footer class="site-footer">
+    <div class="container footer-container">
+      <div class="footer-top">
+        <div class="footer-brand">
+          <a href="#home" class="brand-logo">
+            <span class="logo-symbol">
+              <svg viewBox="0 0 24 24" width="20" height="20" fill="currentColor">
+                <path d="M12 2L2 7l10 5 10-5-10-5zM2 17l10 5 10-5M2 12l10 5 10-5"/>
+              </svg>
+            </span>
+            <span class="logo-text">Maiman<span class="highlight">.dev</span></span>
+          </a>
+          <p class="footer-tagline">
+            Backend & Fullstack Web Developer berfokus pada solusi Laravel berkualitas tinggi, scalable, dan secure.
+          </p>
+        </div>
+
+        <div class="footer-nav-groups">
+          <div class="footer-group">
+            <h5>Navigasi</h5>
+            <ul>
+              <li><a href="#home">Home</a></li>
+              <li><a href="#about">Tentang Saya</a></li>
+              <li><a href="#skills">Keahlian (Skills)</a></li>
+              <li><a href="#projects">Katalog Proyek</a></li>
+              <li><a href="#kontak">Kontak</a></li>
+            </ul>
+          </div>
+
+          <div class="footer-group">
+            <h5>Spesialisasi</h5>
+            <ul>
+              <li><a href="#skills">Laravel 11 & PHP 8.3</a></li>
+              <li><a href="#skills">RESTful API & Sanctum</a></li>
+              <li><a href="#skills">MySQL & Redis Caching</a></li>
+              <li><a href="#skills">Filament & Livewire</a></li>
+              <li><a href="#skills">Docker & VPS Linux</a></li>
+            </ul>
+          </div>
+
+          <div class="footer-group">
+            <h5>Jejaring Sosial</h5>
+            <ul>
+              <li><a href="https://github.com/maimananugrahitm18" target="_blank" rel="noopener noreferrer">GitHub</a></li>
+              <li><a href="mailto:maimananugrahitm18@gmail.com">Email Resmi</a></li>
+              <li><a href="https://wa.me/6282289152653" target="_blank" rel="noopener noreferrer">WhatsApp</a></li>
+            </ul>
+          </div>
+        </div>
+      </div>
+
+      <div class="footer-bottom">
+        <p>© 2026 Maiman Anugrah. Seluruh hak cipta dilindungi. Dibuat dengan presisi arsitektur web modern.</p>
+        <button id="backToTopBtn" class="back-to-top" title="Kembali ke atas" aria-label="Kembali ke atas">
+          <svg viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="2">
+            <polyline points="18 15 12 9 6 15"></polyline>
+          </svg>
+          <span>Ke Atas</span>
+        </button>
+      </div>
+    </div>
+  </footer>
+
+  <!-- Scripts -->
+  <script src="js/main.js"></script>
+</body>
+</html>
+
